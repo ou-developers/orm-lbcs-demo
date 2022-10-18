@@ -12,7 +12,7 @@ packages:
   - httpd
 
 runcmd:
-  - [sh, -c, echo "<html><body text=green bgcolor=orange center><center><br><br><br><br><br><br><br><h1>Welcome!!</h1><br><h2>Web Server IP</h2> <h3>`hostname --ip-address`</h3></center></body></html>" > /var/www/html/index.html]
+  - [sh, -c, echo "<html><body text=green bgcolor=orange center><center><br><br><br><br><br><br><br><h1>Welcome!!</h1><br><h2> Web Server IP : `hostname --ip-address` </h2></center></body></html>" > /var/www/html/index.html]
   - [firewall-offline-cmd, --add-service=https]
   - [firewall-offline-cmd, --add-service=http]
   - [systemctl, enable, httpd]
