@@ -11,6 +11,11 @@ variable "AD" {
 }
 
 # VCN variables
+variable "vcn_name" {
+  description = "VCN Name"
+  default     = "IAD-DOP-LAB05-1-VCN-01"
+}
+
 variable "vcn_cidr" {
   default = "10.0.0.0/16"
 }
