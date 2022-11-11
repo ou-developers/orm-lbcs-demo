@@ -1,6 +1,6 @@
 resource "oci_load_balancer" Load_Balancer {
   compartment_id = var.compartment_ocid
-  display_name = "Demo-Web-LB"
+  display_name = "IAD-DOP-LAB05-1-LB-01"
   shape          = "flexible"
   subnet_ids = [
     oci_core_subnet.subnet.id,
@@ -55,7 +55,7 @@ resource "oci_load_balancer_listener" lb-listeners {
   hostname_names = [
   ]
   load_balancer_id = oci_load_balancer.Load_Balancer.id
-  name             = "lb-listeners"
+  name             = "IAD-DOP-LAB05-1-LST-01"
   port     = "80"
   protocol = "HTTP"
   rule_set_names = [
