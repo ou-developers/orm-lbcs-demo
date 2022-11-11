@@ -2,7 +2,7 @@ resource "oci_core_virtual_network" "vcn" {
   compartment_id = var.compartment_ocid
   cidr_block     = var.vcn_cidr
   dns_label      = var.vcn_dns_label
-  display_name   = var.vcn_name
+  display_name   = "IAD-DOP-LAB05-1-VCN-01"
 }
 
 # Internet Gateway
