@@ -17,12 +17,12 @@ variable "vcn_cidr" {
 
 variable "vcn_dns_label" {
   description = "VCN DNS label"
-  default     = "IAD-DOP-LAB05-1-VCN-01"
+  default     = "VCN01"
 }
 
 variable "dns_label" {
   description = "Subnet DNS Label"
-  default     = "Subnet-IAD-DOP-LAB05-1-VCN-01"
+  default     = "Subnet"
 }
 
 # OS Image
