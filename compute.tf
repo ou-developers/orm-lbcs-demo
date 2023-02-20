@@ -8,7 +8,11 @@ resource "oci_core_instance" "web-01" {
   compartment_id      = var.compartment_ocid
   display_name        = "IAD-DOP-LAB05-1-VM-01"
   shape               = var.instance_shape
-
+  
+  shape_config {
+    ocpus = "1"
+    memory_in_gbs = "6"
+  }
   create_vnic_details {
     subnet_id = oci_core_subnet.subnet.id
     display_name = "primaryvnic"
@@ -31,7 +35,11 @@ resource "oci_core_instance" "web-01" {
    compartment_id      = var.compartment_ocid
    display_name        = "IAD-DOP-LAB05-1-VM-02"
    shape               = var.instance_shape
- 
+   
+   shape_config {
+    ocpus = "1"
+    memory_in_gbs = "6"
+  }
    create_vnic_details {
      subnet_id = oci_core_subnet.subnet.id
      display_name = "primaryvnic"
