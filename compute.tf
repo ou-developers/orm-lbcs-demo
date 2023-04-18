@@ -11,7 +11,7 @@ resource "oci_core_instance" "web-01" {
   
   shape_config {
     ocpus = "1"
-    memory_in_gbs = "6"
+    memory_in_gbs = "2"
   }
   create_vnic_details {
     subnet_id = oci_core_subnet.subnet.id
@@ -38,7 +38,7 @@ resource "oci_core_instance" "web-01" {
    
    shape_config {
     ocpus = "1"
-    memory_in_gbs = "6"
+    memory_in_gbs = "2"
   }
    create_vnic_details {
      subnet_id = oci_core_subnet.subnet.id
